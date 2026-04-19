@@ -32,7 +32,7 @@ export default function App(){
         : 0
     return (
     <>
-    <div className={css.app}></div>
+    <div className={css.app}>
         <CafeInfo/>
         <VoteOptions
         onVote={handleVote}
@@ -45,6 +45,7 @@ export default function App(){
         positiveRate={positiveRate}
         /> ) : (
         <Notification/>) } 
+        </div>
     </>
     )
 }
