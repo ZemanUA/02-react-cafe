@@ -8,9 +8,9 @@ import { type VoteType } from "../types/votes";
  export default function VoteOptions({onVote, onReset}: VoteOptionsProps){
     return(
     <div className={css.container}>
-        <button onClick={() => {onVote('good')}} className={css.button} >Good</button>
-        <button className={css.button} onClick={() => {onVote('neutral')}}>Neutral</button>
-        <button className={css.button} onClick={() => {onVote('bad')}}>Bad</button>
+        <button className={css.button} onClick={() => onVote('good')} >Good</button>
+        <button className={css.button} onClick={() => onVote('neutral')}>Neutral</button>
+        <button className={css.button} onClick={() => onVote('bad')}>Bad</button>
         <button className={`${css.button} ${css.reset}`} onClick={onReset}>Reset</button>
     </div>
     )

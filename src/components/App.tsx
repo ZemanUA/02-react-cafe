@@ -13,13 +13,14 @@ const initialVotes: Votes = {
 };
 
 
+
 export default function App(){
  const [Vote, setVote] = useState<Votes>(initialVotes);     
  
   function handleVote (event: VoteType): void {
     setVote(prev => ({
-        ...prev,
-        [event]:prev[event] + 1,
+      ...prev,
+      [event]: prev[event] + 1,
     }));
   };
 
@@ -40,7 +41,7 @@ export default function App(){
         />
         {totalVotes > 0 ? (
         <VoteStats
-        votes={initialVotes}
+        votes={Vote}  
         totalVotes={totalVotes}
         positiveRate={positiveRate}
         /> ) : (
